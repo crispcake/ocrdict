@@ -1,4 +1,4 @@
-package com.guna.ocrsample;
+package com.crispcakeinc.ocrdict;
 
 import org.junit.Test;
 

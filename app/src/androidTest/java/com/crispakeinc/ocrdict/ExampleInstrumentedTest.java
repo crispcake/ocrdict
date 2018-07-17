@@ -1,4 +1,4 @@
-package com.guna.ocrsample;
+package com.crispakeinc.ocrdict;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.guna.ocrsample", appContext.getPackageName());
+        assertEquals("com.crispakeinc.ocrdict", appContext.getPackageName());
     }
 }

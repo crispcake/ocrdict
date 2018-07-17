@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">OCRSample</string>
+    <string name="app_name">OcrDict</string>
     <string name="photo">Photo</string>
 </resources>
