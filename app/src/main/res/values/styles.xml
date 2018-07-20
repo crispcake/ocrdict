@@ -1,6 +1,5 @@
 <resources>
-
-    <!-- Base application theme. -->
+    <!-- Empty parent idiom -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -8,4 +7,586 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+
+
+
+
+    <style name="NoParent"/>
+
+    <!-- Root styles that vary by API level -->
+    <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- API 11+ (compatibility) -->
+        <!--<item name="indeterminateProgressStyle">@style/Compat.IndeterminateProgress</item>-->
+        <!-- API 14+ (compatibility) -->
+        <item name="listPreferredItemPaddingLeft">@dimen/compat_list_preferred_item_padding_left</item>
+        <item name="listPreferredItemPaddingRight">@dimen/compat_list_preferred_item_padding_right</item>
+        <item name="listPreferredItemHeightSmall">@dimen/compat_list_preferred_item_height_small</item>
+    </style>
+
+    <style name="FrameworkRoot.ActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse"/>
+    <style name="FrameworkRoot.ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"/>
+    <style name="FrameworkRoot.ActionBar.TabBar" parent="Widget.AppCompat.Light.ActionBar.TabBar.Inverse"/>
+    <style name="FrameworkRoot.ActionBar.TabText" parent="Widget.AppCompat.Light.ActionBar.TabText.Inverse"/>
+    <style name="FrameworkRoot.ActionBar.TabView" parent="Widget.AppCompat.Light.ActionBar.TabView.Inverse"/>
+
+    <!-- Immediate parent theme to specify base values for custom attributes -->
+    <style name="Theme.Base" parent="FrameworkRoot.Theme">
+        <item name="textHeaderMaxLines">@integer/text_header_max_lines</item>
+        <item name="trackAbstractMaxLines">@integer/track_abstract_max_lines</item>
+        <item name="activatableItemBackground">@drawable/activatable_item_background</item>
+    </style>
+
+    <style name="Theme.Mapyou" parent="Theme.Base">
+        <item name="colorControlNormal">@color/holo_blue_light</item>
+        <item name="colorControlActivated">@color/holo_blue_light</item>
+        <item name="colorControlHighlight">@color/holo_blue_light</item>
+        <item name="android:popupMenuStyle">@style/WhereskPopupMenu</item>
+        <item name="popupMenuStyle">@style/WhereskPopupMenu</item>
+
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/white</item>
+        <item name="colorPrimary">@color/holo_blue_light</item>
+        <item name="android:windowTitleSize">0dp</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:actionBarStyle">@style/WhereskActionBar</item>
+        <item name="actionBarStyle">@style/WhereskActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/action_navigation_back</item>
+        <item name="homeAsUpIndicator">@drawable/action_navigation_back</item>
+        <item name="android:selectableItemBackground">@drawable/activatable_item_background</item>
+        <item name="selectableItemBackground">@drawable/activatable_item_background</item>
+        <item name="android:actionBarItemBackground">@drawable/activatable_item_background</item>
+        <item name="actionBarItemBackground">@drawable/activatable_item_background</item>
+        <item name="android:actionMenuTextAppearance">@style/menuTextStyle</item>
+        <item name="actionMenuTextAppearance">@style/menuTextStyle</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:actionButtonStyle">@style/WhereskActionButton</item>
+        <item name="actionButtonStyle">@style/WhereskActionButton</item>
+    </style>
+
+    <style name="WhereskPopupMenu" parent="@style/Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">@drawable/activatable_item_background</item>
+    </style>
+
+    <style name="WhereskActionButton" parent="Widget.AppCompat.Light.ActionButton">
+        <item name="android:background">@drawable/activatable_item_background</item>
+        <item name="background">@drawable/activatable_item_background</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="icon">@android:color/transparent</item>
+    </style>
+
+    <!-- Action bar -->
+    <style name="WhereskActionBar" parent="FrameworkRoot.ActionBar">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="background">@drawable/actionbar_background</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="icon">@android:color/transparent</item>
+        <item name="android:displayOptions">showHome|homeAsUp|showTitle</item>
+        <item name="displayOptions">showHome|homeAsUp|showTitle</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitleStyle</item>
+        <item name="titleTextStyle">@style/ActionBarTitleStyle</item>
+    </style>
+
+    <style name="ActionBarTitleStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- List views and list mapyouCallLogList -->
+    <style name="ListItemContainerBase">
+        <item name="android:background">?activatableItemBackground</item>
+        <item name="android:minHeight">80dp</item>
+    </style>
+
+    <!-- SimpleListItems are mapyouCallLogList whose containers provides the appropriate padding, and
+         usually the container and content are a single view. -->
+    <style name="SimpleListItem" parent="ListItemContainerBase">
+        <item name="android:paddingLeft">?listPreferredItemPaddingLeft</item>
+        <item name="android:paddingRight">?listPreferredItemPaddingRight</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="SimpleListItemSmall" parent="SimpleListItem">
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- ComplexListItems are mapyouCallLogList whose content must provide the padding. -->
+    <style name="ComplexListItem" parent="ListItemContainerBase"/>
+
+    <style name="ComplexListItemContent">
+        <item name="android:paddingLeft">?listPreferredItemPaddingLeft</item>
+        <item name="android:paddingRight">?listPreferredItemPaddingRight</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <!-- List item text -->
+    <style name="ListItemContactName">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:shadowColor">@color/accent_6</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="ListItemPhoneNumber">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/accent_10</item>
+    </style>
+
+    <style name="ListItemAddress">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/accent_13</item>
+    </style>
+
+    <style name="ListItemAddressForMessageBasedLocationList">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/accent_13</item>
+    </style>
+
+    <style name="ListItemProfileText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/accent_15</item>
+        <item name="android:shadowColor">@color/accent_6</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="ListItemProfileAddress">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/accent_13</item>
+    </style>
+
+    <style name="ListItemContactName.Inverse">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/body_text_1_inverse</item>
+    </style>
+
+    <style name="ListItemPhoneNumber.Inverse">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/body_text_1_inverse</item>
+    </style>
+
+    <!-- Basic element style -->
+    <style name="Basic_Element_Style">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="systemConfigContainerStyle">
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:minHeight">25dp</item>
+    </style>
+
+    <style name="systemConfigLableStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+    </style>
+
+    <style name="groupMemberProfileLocationInfoStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+
+    <style name="titleLableStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+    </style>
+
+    <style name="systemConfigLableStyleLevel2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+    </style>
+
+    <style name="systemConfigGroupStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/mapyou_grey_body_text_2</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="systemConfigDividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@color/holo_blue_light</item>
+    </style>
+
+    <style name="systemConfigTextEditStyleLayout">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:background">@drawable/rectangle_border</item>
+    </style>
+
+    <style name="systemConfigTextEditStyle">
+        <item name="android:padding">10dp</item>
+        <item name="android:background">?activatableItemBackground</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/holo_blue_light</item>
+    </style>
+
+    <style name="systemConfigTextEditStyleSelection">
+        <item name="android:padding">10dp</item>
+        <item name="android:background">?activatableItemBackground</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/mapyou_grey_body_text_1</item>
+    </style>
+
+    <style name="ShadowTextViewForGreyTitle">
+        <item name="android:shadowColor">@color/accent_9</item>
+        <item name="android:shadowRadius">0.01</item>
+        <item name="android:shadowDx">1.5</item>
+        <item name="android:shadowDy">1.5</item>
+    </style>
+
+    <style name="groupHeader" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="groupMemberProfileHeader" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:background">@drawable/holo_blue_underline_box_thin</item>
+    </style>
+
+    <style name="callingHistoryGroupHeader" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">@drawable/holo_blue_underline_box_thin</item>
+    </style>
+
+    <style name="callingIcon">
+        <item name="android:layout_width">11dp</item>
+        <item name="android:layout_height">11dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+    </style>
+
+    <style name="NoRecordText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/mapyou_grey_body_text_2</item>
+    </style>
+    <style name="mapPopupTitle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="mapPopupAddress" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_15</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="grey_button">
+        <item name="android:textColor">@color/accent_5</item>
+        <item name="android:background">@drawable/grey_button</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="green_button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/green_button</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="thin_grey_button" parent="thin_button">
+        <item name="android:background">@drawable/thin_grey_button</item>
+    </style>
+
+    <style name="thin_green_button" parent="thin_button">
+        <item name="android:background">@drawable/thin_green_button</item>
+    </style>
+
+    <style name="thin_red_button" parent="thin_button">
+        <item name="android:background">@drawable/thin_red_button</item>
+    </style>
+
+    <style name="thin_blue_button" parent="thin_button">
+        <item name="android:background">@drawable/thin_blue_button</item>
+    </style>
+
+    <style name="thin_button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="small_blue_button_with_round_corner">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">@drawable/square_with_round_corner_blue_button</item>
+    </style>
+
+    <style name="registrationTitleStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="groupTitleStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+    </style>
+
+    <style name="addNewMemberInfoGroupTitleStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+    </style>
+
+    <style name="registrationInfoStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/accent_11</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    <style name="firstCharacterStyleSmall" parent="ShadowTextViewForWhiteText">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="firstCharacterStyleSmaller" parent="ShadowTextViewForWhiteText">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="firstCharacterStyleLarge" parent="ShadowTextViewForWhiteText">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ShadowTextViewForWhiteText">
+        <item name="android:shadowColor">@color/accent_6</item>
+        <item name="android:shadowRadius">0.01</item>
+        <item name="android:shadowDx">1.5</item>
+        <item name="android:shadowDy">1.5</item>
+    </style>
+
+    <style name="termsOfUseLableStyle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/holo_blue_light</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <!--For location based messaging-->
+    <style name="ListItemMessaging">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/accent_15</item>
+        <item name="android:shadowColor">@color/accent_6</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="ListItemMessagingAddress">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/accent_27</item>
+        <item name="android:shadowColor">@color/accent_21</item>
+        <item name="android:shadowRadius">0.1</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="ListItemMessagingDate">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/square_with_round_corner_dark_background_without_border</item>
+    </style>
+
+    <style name="voiceDurationTextStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/mapyou_grey_body_text_1</item>
+    </style>
+
+    <style name="longClickOptionStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/grey_darker_mini_transparent</item>
+    </style>
+    <style name="longClickOptionItemStyle">
+        <item name="android:layout_width">@dimen/long_click_option_width_in_message_history_activity</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/list_extra_button_background_with_border</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="guideBehaviourDescStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="distanceMarkerTextStyle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_holo_blue_light</item>
+    </style>
+    <style name="quickReplyLabelTextStyle" parent="ShadowTextViewForWhiteText">
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="menuTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="baiduDownloadLableStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/accent_10</item>
+    </style>
+    <style name="itemTextAppearance">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <!--Wheresk-->
+    <style name="textDistanceStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+    <style name="questionTextStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="answerRateTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+    <style name="bestAnswerSummaryStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/accent_7</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="smallBlueButtonWithRoundCorner">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">@drawable/square_with_round_corner_blue_button</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+    <style name="smallGreyButtonWithRoundCorner">
+        <item name="android:textColor">@color/accent_13</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">@drawable/square_with_round_corner_grey_button</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+    <style name="followerNumberTextStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_11</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="userNicknameTextStyle">
+        <item name="android:textColor">@color/accent_11</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="answerDetailAnswerTextStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_11</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="answerRateOptionItemStyle">
+        <item name="android:layout_width">@dimen/long_click_option_width_in_message_history_activity</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/list_extra_button_background_with_border</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="answerRateOptionStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/grey_darker_mini_transparent</item>
+    </style>
+    <style name="answerDetailPageBottomOptionStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/accent_23</item>
+    </style>
+    <style name="answerCommentUserNameStyle">
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="answerCommentComentStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_11</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="answerCommentComentDateStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_31</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="askQuestionSpecifyLocationDescStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_32</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="orTextStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_11</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="answerQuestionPublicMenuStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="answerDetailLastUpdateTextStyle" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_25</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="answerThankUserNameStyle">
+        <item name="android:textColor">@color/accent_10</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="answerThankUserDateStyle">
+        <item name="android:textColor">@color/accent_31</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="homeBigButtonStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="loadMoreTextStyleInMap">
+        <item name="android:textColor">@color/accent_38</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="createdDateStyle">
+        <item name="android:textColor">@color/accent_16</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+    <style name="createdDateStyleInMap" parent="ShadowTextViewForGreyTitle">
+        <item name="android:textColor">@color/accent_23</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+    <style name="signInPageDescStyle">
+        <item name="android:textColor">@color/accent_25</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <style name="signInPageTermsOfUseStyle">
+        <item name="android:textColor">@color/accent_27</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
 </resources>

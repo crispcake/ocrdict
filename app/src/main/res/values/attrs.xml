@@ -1,0 +1,24 @@
+<resources>
+
+    <declare-styleable name="BaseTheme">
+        <attr name="textHeaderMaxLines" format="integer"/>
+        <attr name="trackAbstractMaxLines" format="integer"/>
+        <attr name="activatableItemBackground" format="reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="BezelImageView">
+        <attr name="maskDrawable" format="reference"/>
+        <attr name="borderDrawable" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="corner_radius" format="dimension"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="round_background" format="boolean"/>
+        <attr name="is_oval" format="boolean"/>
+        <attr name="android:scaleType"/>
+    </declare-styleable>
+
+</resources>

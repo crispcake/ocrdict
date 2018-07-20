@@ -3,4 +3,88 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="body_text_1">#ff000000</color>
+    <color name="body_text_2">#99000000</color>
+    <color name="body_text_disabled">#66000000</color>
+
+    <color name="body_text_1_inverse">#ffffffff</color>
+    <color name="body_text_2_inverse">#99ffffff</color>
+
+    <color name="body_text_1_positive">#ff669900</color>
+    <color name="red">#ffff0000</color>
+    <color name="white">#ffffffff</color>
+    <color name="blue">#ff0000ff</color>
+
+    <color name="accent_1">#ff7caaec</color>
+    <color name="accent_2">#51A2D7</color>
+    <color name="accent_3">#ffe7ecea</color>
+    <color name="accent_4">#ffd5e4ec</color>
+    <color name="accent_5">#ff0f0f0f</color>
+    <color name="accent_6">#88b1b1b1</color>
+    <color name="accent_7">#666666</color>
+    <color name="accent_8">#77C5E2</color>
+    <color name="accent_9">#ccd4d4d4</color>
+    <color name="accent_10">#464646</color>
+    <color name="accent_11">#747476</color>
+    <color name="accent_13">#646464</color>
+    <color name="accent_14">#fff5f5f5</color>
+    <color name="accent_15">#ff121212</color>
+    <color name="accent_16">#ffc3c3c3</color>
+    <color name="accent_17">#ffcecece</color>
+    <color name="accent_19">#aab1b1b1</color>
+    <color name="accent_20">#ffcccccc</color>
+    <color name="accent_21">#99cccccc</color>
+    <color name="accent_22">#ffd0d0d0</color>
+    <color name="accent_23">#787878</color>
+    <color name="accent_24">#aaf6f6f6</color>
+    <color name="accent_25">#ff8f8f8f</color>
+    <color name="accent_26">#f6f6f6</color>
+    <color name="accent_27">#ffaeaeae</color>
+    <color name="accent_28">#d5d5d5</color>
+    <color name="accent_29">#ffe1e1e1</color>
+    <color name="accent_30">#44e1e1e1</color>
+    <color name="accent_31">#CC787878</color>
+    <color name="accent_32">#99111111</color>
+    <color name="accent_33">#ffc5c5c5</color>
+    <color name="accent_34">#cccccccc</color>
+    <color name="accent_35">#fffcfcfc</color>
+    <color name="accent_36">#22ffffff</color>
+    <color name="accent_37">#ffebebeb</color>
+    <color name="accent_38">#cc111111</color>
+
+    <color name="grey_dark_mini_transparent">#cc444444</color>
+    <color name="grey_darker_mini_transparent">#cc111111</color>
+    <color name="grey_dark_lighter">#818181</color>
+
+    <color name="holo_red_light">#ff4444</color>
+    <color name="light_holo_red_light">#ffff8b90</color>
+    <color name="holo_green_light">#99cc00</color>
+    <color name="light_holo_green_light">#c1ff00</color>
+    <color name="holo_blue_light">#33b5e5</color>
+    <color name="dark_holo_blue_light">#ff309fd5</color>
+    <color name="light_holo_blue_light">#ff71d9e5</color>
+    <color name="holo_orange_light">#ffbb33</color>
+    <color name="light_holo_orange_light">#ffffcc6c</color>
+    <color name="holo_grey_light">#ffcecece</color>
+    <color name="light_holo_grey_light">#ffeeeeee</color>
+    <color name="light_green_for_messaging">#e9ffa4</color>
+    <color name="light_blue_for_messaging">#d3eaf2</color>
+    <color name="guide_behaviour_background">#99000000</color>
+
+    <color name="mapyou_grey_body_text_1">#ff7b7b7b</color>
+    <color name="mapyou_grey_body_text_2">#ffb1b1b1</color>
+    <color name="mapyou_grey_body_text_3">#ffffffff</color>
+
+
+    <color name="mapyou_grey_border">#ffe1e1e1</color>
+
+    <color name="all_track_color">#ff222222</color>
+    <color name="home_pane_header">#99000000</color>
+    <color name="banner_header">#dddddd</color>
+
+    <color name="past_background_color">#11000000</color>
+    <color name="transparent">#00000001</color>
+
 </resources>

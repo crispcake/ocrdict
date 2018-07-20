@@ -1,0 +1,131 @@
+<resources>
+    <!-- UI elements -->
+    <dimen name="whats_on_height">64dp</dimen>
+    <dimen name="whats_on_item_padding">10dp</dimen>
+    <dimen name="whats_on_button_right_padding">20dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="track_icon_width">32dp</dimen>
+    <dimen name="track_icon_padding">2dp</dimen>
+    <dimen name="page_margin_width">16dp</dimen>
+    <dimen name="list_extra_button_width">40dp</dimen>
+    <dimen name="action_button_min_width">56dp</dimen>
+    <dimen name="multipane_half_padding">8dp</dimen>
+    <dimen name="multipane_padding">16dp</dimen>
+    <dimen name="list_scroll_top_offset">16dp</dimen>
+    <dimen name="schedule_block_time_width">72dp</dimen>
+    <dimen name="map_multipane_right_padding">48dp</dimen>
+    <dimen name="announcements_margin_width">8dp</dimen>
+
+    <!-- body content -->
+    <dimen name="element_spacing_normal">8dp</dimen>
+    <dimen name="content_padding_normal">16dp</dimen>
+    <dimen name="text_size_diff_large_small">6sp</dimen>
+    <dimen name="speaker_image_size">48dp</dimen>
+    <dimen name="speaker_image_padding">8dp</dimen>
+    <dimen name="vendor_image_size">100dp</dimen>
+
+    <!-- Widget -->
+    <dimen name="widget_margin">8dp</dimen>
+
+    <!-- Mapyou UI -->
+    <dimen name="small_photo_width">200dp</dimen>
+    <dimen name="small_photo_height">400dp</dimen>
+    <dimen name="voice_recorder_container_width">160dp</dimen>
+    <dimen name="message_history_list_item_thumbnail_width_height">40dp</dimen>
+    <dimen name="message_history_list_item_thumbnail_round_radius">20dp</dimen>
+    <dimen name="message_history_list_item_margin_between_thumbnail_and_message_container">5dp</dimen>
+    <dimen name="long_click_option_width_in_message_history_activity">120dp</dimen>
+    <dimen name="group_location_menu_size">28dp</dimen>
+    <dimen name="group_location_menu_margin">10dp</dimen>
+    <dimen name="message_history_location_icon_size">25dp</dimen>
+    <dimen name="message_history_location_icon_padding">5dp</dimen>
+    <dimen name="message_history_location_icon_margin_left_right">5dp</dimen>
+    <dimen name="message_history_location_icon_margin_top">5dp</dimen>
+    <dimen name="message_history_message_content_padding">3dp</dimen>
+    <dimen name="message_history_message_content_margin_left_right">5dp</dimen>
+    <dimen name="message_history_item_voice_icon_size">22dp</dimen>
+    <dimen name="message_history_item_voice_icon_padding">5dp</dimen>
+    <dimen name="message_history_item_message_text_padding">5dp</dimen>
+    <dimen name="group_location_voice_icon_size">25dp</dimen>
+    <dimen name="group_location_voice_icon_margin">10dp</dimen>
+    <dimen name="group_map_member_list_width">200dp</dimen>
+    <dimen name="group_map_member_list_margin">10dp</dimen>
+
+    <dimen name="map_marker_locator_oval_width_dp">26dp</dimen>
+    <dimen name="map_marker_locator_oval_height_dp">7dp</dimen>
+    <dimen name="static_map_small_size_dp">60dp</dimen>
+    <dimen name="margin_top_for_middle_line">5dp</dimen>
+    <dimen name="map_lat_lng_bound_padding">50dp</dimen>
+    <dimen name="group_location_group_member_container_size_dp">31dp</dimen>
+    <dimen name="target_small_photo_size_for_marker_in_map_dp">30dp</dimen>
+    <dimen name="half_target_small_photo_size_for_marker_in_map_dp">15dp</dimen>
+    <dimen name="target_large_photo_size_for_marker_in_map_dp">50dp</dimen>
+    <dimen name="target_small_photo_margin_left_in_map_dp">3dp</dimen>
+    <dimen name="map_marker_locator_triangle_height_dp">8dp</dimen>
+    <dimen name="map_marker_locator_triangle_width_dp">15dp</dimen>
+    <dimen name="photo_thumbnail_size">70dp</dimen>
+    <dimen name="group_map_marker_time_lable_text_size">9sp</dimen>
+    <dimen name="group_map_marker_redpoint_size">13dp</dimen>
+    <dimen name="map_info_window_contact_icon_with_triangle_oval_margin_bottom_dp">66dp</dimen>
+    <dimen name="map_info_window_contact_icon_without_triangle_oval_margin_bottom_dp">57dp</dimen>
+    <dimen name="message_history_selection_from_top_padding_top">30dp</dimen>
+    <dimen name="map_marker_photo_icon_border_size">1dp</dimen>
+    <dimen name="message_history_record_stop_button_size">25dp</dimen>
+    <dimen name="message_history_play_retry_send_button_size">40dp</dimen>
+    <dimen name="message_history_play_retry_send_button_padding">5dp</dimen>
+    <dimen name="guide_behaviour_two_margin_right">50dp</dimen>
+    <dimen name="map_my_location_button_container_size">30dp</dimen>
+    <dimen name="map_my_location_button_size">19dp</dimen>
+    <dimen name="map_my_current_location_button_container_size">30dp</dimen>
+    <dimen name="map_my_current_location_button_size">17dp</dimen>
+    <dimen name="map_message_history_icon_container_size">30dp</dimen>
+    <dimen name="map_message_history_icon_size">20dp</dimen>
+    <dimen name="map_two_layer_markers_icon_container_size">30dp</dimen>
+    <dimen name="map_two_layer_markers_icon_size">17dp</dimen>
+    <dimen name="message_history_additional_icon_size">50dp</dimen>
+    <dimen name="message_history_additional_icon_margin">25dp</dimen>
+    <dimen name="message_history_additional_icon_padding">5dp</dimen>
+    <dimen name="group_location_my_location_size">10dp</dimen>
+    <dimen name="group_location_line_width_group_member">1dp</dimen>
+    <dimen name="profile_contact_icon_size">50dp</dimen>
+    <dimen name="profile_contact_radius">25dp</dimen>
+    <dimen name="item_message_history_image_corner_radius">5dp</dimen>
+    <dimen name="guide_behavior_arrow_size">25dp</dimen>
+    <dimen name="google_map_padding_bottom">100dp</dimen>
+    <dimen name="ma_left_drawer_label_container_width">21dp</dimen>
+    <dimen name="ma_left_drawer_label_container_height">30dp</dimen>
+    <dimen name="baiduDownloadButtonTextSize">12sp</dimen>
+    <dimen name="baiduDownloadBigButtonTextSize">16sp</dimen>
+
+
+    <!--Wheresk-->
+
+    <!--Text Size-->
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <dimen name="home_page_question_container_padding_right">10dp</dimen>
+    <dimen name="location_icon_size">15dp</dimen>
+    <dimen name="follower_icon_size">20dp</dimen>
+    <dimen name="answer_detail_user_icon_size">30dp</dimen>
+    <dimen name="rate_icon_size">20dp</dimen>
+    <dimen name="icon_size_in_map">30dp</dimen>
+    <dimen name="answer_detail_map_size">400dp</dimen>
+    <dimen name="home_icon_size">20dp</dimen>
+    <dimen name="answer_detail_bottom_icon_size">25dp</dimen>
+    <dimen name="answer_comment_user_icon_size">40dp</dimen>
+    <dimen name="menu_container_padding">10dp</dimen>
+    <dimen name="myProfileBigButtonTextSize">15sp</dimen>
+    <dimen name="homeBigButtonTextSize">18sp</dimen>
+    <dimen name="answer_thank_user_icon_size">40dp</dimen>
+
+    <!--Facebook UI-->
+    <dimen name="fb_margin_override_top">13dp</dimen>
+    <dimen name="fb_margin_override_bottom">13dp</dimen>
+    <!--The next value changes the margin between the FB icon and the left border:-->
+    <dimen name="fb_margin_override_lr">10dp</dimen>
+    <!--The next value changes the margin between the FB icon and the login text:-->
+    <dimen name="fb_margin_override_textpadding">17dp</dimen>
+
+</resources>

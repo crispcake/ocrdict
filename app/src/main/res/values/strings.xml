@@ -1,4 +1,348 @@
 <resources>
-    <string name="app_name">OcrDict</string>
+    <string name="app_name">Dicty</string>
     <string name="photo">Photo</string>
+
+
+    <string name="register">Register</string>
+    <string name="input_phone_number_manually">Input phone number manually</string>
+    <string name="phone_number">Phone Number: </string>
+    <string name="your_phone_number">Your Phone Number: </string>
+
+    <string name="phone_number_register">Phone Number Registration</string>
+    <string name="registration_direct">Direct Registration</string>
+    <string name="sms_auth">Phone Number Verification</string>
+    <string name="sms_auth_code_title">Mobile Verification Code</string>
+    <string name="next">Next</string>
+
+    <string name="hide">Hide</string>
+    <string name="there_is_no_record_in_trust_list">No record in trusted group</string>
+    <string name="no_record_in_phone_book">No record in phone contacts</string>
+    <string name="find_phone_number_info">The system detects your phone number, if correct, please click the register button below</string>
+    <string name="exit">Exit</string>
+    <string name="save">Save</string>
+    <string name="trust_list">Trusted Group</string>
+    <string name="select_trusted_contacts">Select trusted contacts</string>
+    <string name="select_network_type_for_map_thumbnail">The network for downloading map thumbnail</string>
+    <string name="confirm_text">Confirm</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="display_text">Display</string>
+    <string name="text_and_map">Text and Map</string>
+    <string name="text_only">Only Text</string>
+    <string name="show_my_current_address_to">My location will share with</string>
+    <string name="show_recipient_address_as">Show recipient address as</string>
+    <string name="please_wait">Please wait</string>
+    <string name="will_send_sms_to_phone_number">System will send you an SMS with verification code</string>
+    <string name="sms_auth_error_message">Your verification code is incorrect, please try again.</string>
+    <string name="please_input_auth_code_here">Please input the verification code received in the SMS here, generally SMS will arrive in 2 minutes.</string>
+    <string name="connecting_server">Connecting the server, please wait......</string>
+    <string name="sending_validation_sms">Sending the SMS to your mobile, please wait......</string>
+    <string name="validation_processing">Verifying your code, please wait......</string>
+    <string name="wrong_sms_auth_code">Your verification code is wrong, please try again</string>
+    <string name="meter">m</string>
+    <string name="kilometer">km</string>
+    <string name="distance_between_us">(%1$s away from me)</string>
+    <string name="distance_between_us_with_radius">(%1$s - %2$s away)</string>
+    <string name="unknown_number">Private Number</string>
+    <string name="unknown_address">Unknown Address</string>
+    <string name="signal_is_too_week_for_downloading">Mapyou: The signal is too week, the downloading of map thumbnail is cancelled</string>
+    <string name="signal_is_too_week_and_disable_mapyou">The signal is too week, Mapyou functions are disabled</string>
+    <string name="no_data_connection">No data connection, Mapyou functions are disabled</string>
+    <string name="selected_record">%1$d selected</string>
+    <string name="accurate_to_meter">(accurate to %1$d meters)</string>
+    <string name="terms_of_use">I have read and agreed with the <u>Terms of Use</u></string>
+    <string name="terms_of_use_title">Terms of Use</string>
+    <string name="please_input_correct_phone_number">Please input the correct phone number</string>
+    <string name="please_select_country">Please select the country</string>
+    <string name="google_play_service_is_not_available">Google play service is unavailable on this device! Cause: %1$s</string>
+
+    <string name="could_not_reach_server">Could not connect to the server, pleaes check your network, and try again later.</string>
+
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="call_history">Call History</string>
+    <string name="setting">Setting</string>
+
+    <string name="day">&#160;day</string>
+    <string name="days">&#160;days</string>
+    <string name="hour">&#160;hour</string>
+    <string name="hours">&#160;hours</string>
+    <string name="minute">&#160;minute</string>
+    <string name="minutes">&#160;minutes</string>
+    <string name="second">&#160;second</string>
+    <string name="seconds">&#160;seconds</string>
+
+    <string name="ago">&#160;ago</string>
+
+    <string name="empty_call_history">No call histroy</string>
+    <string name="empty_waiting_for_process">Loading data, please wait&#8230;</string>
+    <string name="accept">Accept</string>
+    <string name="profile_detail">Profile Details</string>
+    <string name="location_info">Location Details</string>
+    <string name="click_again_to_exit">Click again to exit</string>
+
+    <string name="updating_is_successful">Update Successfully</string>
+    <string name="updating_is_failed">Failed to update, please check your network and try again</string>
+
+    <string name="my_location">My Location:&#160;</string>
+    <string name="the_other_side_location">The opponent\'s location: </string>
+    <string name="add_record_in_trust_list">Add records to trusted list</string>
+
+    <string name="this_monday">This Monday</string>
+    <string name="this_tuesday">This Tuesday</string>
+    <string name="this_wednesday">This Wednesday</string>
+    <string name="this_thursday">This Thursday</string>
+    <string name="this_friday">This Friday</string>
+    <string name="this_saturday">This Saturday</string>
+    <string name="this_sunday">This Sunday</string>
+
+    <string name="last_monday">Last Monday</string>
+    <string name="last_tuesday">Last Tuesday</string>
+    <string name="last_wednesday">Last Wednesday</string>
+    <string name="last_thursday">Last Thursday</string>
+    <string name="last_friday">Last Friday</string>
+    <string name="last_saturday">Last Saturday</string>
+    <string name="last_sunday">Last Sunday</string>
+
+
+    <string-array name="location_visibility_array">
+        <item>Trusted Group</item>
+        <item>Phone Book</item>
+        <item>Every One</item>
+        <item>No Body</item>
+    </string-array>
+
+    <string-array name="show_address_as_array">
+        <item>Map Thumbnail and Text</item>
+        <item>Text Only</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="network_type_array">
+        <item>Wifi Only</item>
+        <item>3G and Wifi</item>
+    </string-array>
+
+    <string-array name="yes_no_array">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string name="someone_location">%1$s\'s location:&#160;</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+    <string name="add_new_group">Add New Group</string>
+    <string name="group_name">Group Name</string>
+    <string name="updating_location_in_group">Fetching the member locations in the group</string>
+    <string name="successfully_send_group_update_request">The requst is successfully sent out.</string>
+    <string name="no_group_location_found">No group location found! Please click the request location button on the right of the group name to obtain the locations.</string>
+    <string name="manage_group">Manage Group</string>
+    <string name="all_groups">All Groups</string>
+    <string name="edit_group_name">Edit Group Name</string>
+    <string name="update_group_successfully">The group name is saved successfully</string>
+    <string name="group_members">Group Members</string>
+    <string name="select_group_member">Select Group Member</string>
+    <string name="updating_group_name">In the process of updating group name</string>
+    <string name="deleting_group">In the process of deleting group</string>
+    <string name="delete_group_successfully">The group has been deleted successfully</string>
+    <string name="delete_group_member_successfully">The group members have been deleted successfully</string>
+    <string name="deleting_group_member">In the process of deleting group members</string>
+    <string name="add_group_member">In the process of adding group members</string>
+    <string name="add_group_member_successfully">The group members have been added successfully</string>
+    <string name="loading_map">In the process of loading map</string>
+    <string name="there_is_no_record_in_message_based_location_list">No record in location list</string>
+    <string name="there_is_no_record_in_group_member_list">No record in group member list</string>
+    <string name="message_based_location">Location List</string>
+    <string name="user_not_registered_for_message_based_location">%1$s (%2$s) doesn\'t installed MapYou, so you can\'t get its location.</string>
+    <string name="select_contact_for_location">Select contact for location</string>
+    <string name="send_request_for_location">Sending request for location, please wait......</string>
+    <string name="request_location_message_succeed">The location request has been sent out successfully. You will be notified once the location is received.</string>
+    <string name="network_error">The network has some problem, please try it later</string>
+    <string name="get_location_from_someone">Get location from %1$s</string>
+
+    <string name="main_setting">Main Setting</string>
+    <string name="plugin_setting">Plugin Setting</string>
+    <string name="call_location_sharing">Call Location Sharing</string>
+    <string name="individual_location">Individual Location</string>
+    <string name="main_menu">Main Setting</string>
+    <string name="plugin">Plug-Ins</string>
+    <string name="group_locations">Map</string>
+    <string name="start">Start</string>
+    <string name="please_input_new_group_name">Please input a new group name here. E.g. Family, Close Friends</string>
+    <string name="add_new_group_info_title">Why Group?</string>
+    <string name="add_new_group_info_content">Messages sent to or received from the members in the group will be displayed in the map. You can create more groups later.</string>
+    <string name="add_new_group_info_title_first_launch">Registration Succeed</string>
+    <string name="add_new_group_info_content_first_launch">Congratulations, you have registered successfully. Now, let\'s create a new group. Messages sent to or received from the members in the group will be displayed in the map. You can create more groups later.</string>
+    <string name="got_it">Got it!</string>
+    <string name="no_group_please_create_one">No group exists! Please create a new one.</string>
+    <string name="fetching_individual_location_in_group">Fetching %1$s\'s location (%2$s) in the group</string>
+    <string name="gps">GPS</string>
+    <string name="network">Network</string>
+    <string name="info_call_location_sharing_title" />
+    <string name="info_call_location_sharing_content" />
+    <string name="info_get_friends_location_title" />
+    <string name="info_get_friends_location_content" />
+    <string name="info_get_friends_location_content_with_guide_behavior"></string>
+    <string name="info_show_my_address_to_title" />
+    <string name="info_show_my_address_to_content" />
+    <string name="info_show_recipient_address_as_title" />
+    <string name="info_show_recipient_address_as_content" />
+    <string name="info_select_network_type_for_map_thumbnail_title" />
+    <string name="info_select_network_type_for_map_thumbnail_content" />
+    <string name="info_gps_positioning_title" />
+    <string name="info_gps_positioning_content" />
+    <string name="you_can_go_back_in_seconds">You can go back in %1$s seconds.</string>
+    <string name="info_member_without_location_title">Members without locations</string>
+    <string name="info_user_not_register_title">User is not registered</string>
+    <string name="info_show_user_not_register_content">%1$s (%2$s) doesn\'t installed MapYou, so you can\'t get its location.</string>
+    <string name="location_timeout_title">Getting location timeout on %1$s\'s mobile phone:</string>
+    <string name="location_timeout_content">Getting Location (%1$s) Timeout!</string>
+
+    <string name="baidumap_offline_download">Offline Map Download</string>
+    <string name="send">Send</string>
+    <string name="sending_message">Sending message in progress ...</string>
+    <string name="successfully_send_message">Message is sent out successfully</string>
+    <string name="message_received_title">Receive %1$s\'s message:</string>
+    <string name="message_history_list">Message history for dsfd</string>
+    <string name="there_is_no_record_in_messaging_list">There is no record here</string>
+    <string name="no_location_info_available">No location info is available</string>
+    <string name="please_input_message">Please input message!</string>
+    <string name="location_sent_out">Location sent out:</string>
+    <string name="location_received">Location received:</string>
+    <string name="get_location_when_sending_message">Get location when sending message</string>
+    <string name="info_get_location_when_sending_message_title">Get Location When Sending Message</string>
+    <string name="info_get_location_when_sending_message_content">Get Location When Sending Message Content</string>
+    <string name="add_new_member_info_group">Add new member into group</string>
+    <string name="add_to_group">Add "%1$s" to the group listed below</string>
+    <string name="create_new_group">Create new group</string>
+    <string name="shortcut_is_created">Shortcut of Mapyou is created on your desktop</string>
+    <string name="notification">Notification</string>
+    <string name="address">Address: </string>
+    <string name="latitude">Latitude: </string>
+    <string name="longitude">Longitude: </string>
+    <string name="radius">Radius: </string>
+    <string name="location_type">Positioning Type: </string>
+    <string name="details">Details</string>
+    <string name="network_positioning">Network</string>
+    <string name="gps_positioning">GPS</string>
+    <string name="group_member_profile_location_info">Location Information</string>
+    <string name="group_members_are_not_registered_title">Group members are not registered</string>
+    <string name="group_members_are_not_registered">%1$s are not registered, so you can not get their locations. Do not wait, ask them to install and register mapyou now, and enjoy together.</string>
+    <string name="group_has_no_member">Group has no member yet!</string>
+    <string name="group_messaging">All Messages in the group</string>
+    <string name="group_text">G</string>
+    <string name="get_location_time_out">Getting location timeout!</string>
+    <string name="message">Message</string>
+    <string name="time">Time: </string>
+    <string name="image_message_received_title">Receive %1$s\'s image message</string>
+    <string name="voice_message_received_title">Receive %1$s\'s voice message</string>
+    <string name="copy">Copy</string>
+    <string name="delete">delete</string>
+    <string name="copied_to_clipboard">Copied to Clipboard!</string>
+    <string name="no_address_info">No address information</string>
+
+    <string name="get_friend_location">Get Friend\'s Location</string>
+    <string name="sms_template">Welcome to Map Messenger! Your verification code is: </string>
+    <string name="looking_for_your_friends_in_progress">Looking for your friends in Map Messenger, please wait for a moment.</string>
+    <string name="guide_behaviour_individual_contact_desc">Choose a contact</string>
+    <string name="guide_behaviour_message_send_message_to_contact">Send a message to the contact</string>
+    <string name="guide_behaviour_message_get_location_from_contact">Get the contact\'s location</string>
+    <string name="guide_behaviour_get_location_desc">View the detail of your current location</string>
+    <string name="me">Myself</string>
+    <string name="get_your_location">Get Location</string>
+    <string name="want_to_get_your_location">%1$s wants to share location with you.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="never">Never</string>
+    <string name="enable_get_friends_location">Enable Get Friend\'s Location Plugin</string>
+    <string name="do_you_want_to_enable_share_location_with_friends">Do you want to enable this plugin to share location with %1$s?</string>
+    <string name="do_not_ask_again">Do not ask again</string>
+    <string name="contact_not_registered_odd">%1$s is not registered. He/She can not receive this message!</string>
+    <string name="contact_not_registered_even">%1$s are not registered. They can not receive this message!</string>
+    <string name="get_my_location_when_startup">Get my location when startup</string>
+    <string name="distance_to_contact">%1$s to %2$s</string>
+    <string name="receive_message_from_non_group_member_title">Message Received</string>
+    <string name="receive_message_from_non_group_member_content">%1$s sends a message to you. Do you want to add him/her into your group?</string>
+    <string name="group_name_can_not_be_blank">Group name can not be blank!</string>
+    <string name="quick_send_message_to_everyone">Send message to everyone in the group</string>
+    <string name="message_sent_out_successfully">Your message has been sent out successfully.</string>
+    <string name="message_sent_out_failed">Failed to send out your message!</string>
+    <string name="info_get_current_location_when_startup_title" />
+    <string name="info_get_current_location_when_startup_content" />
+    <string name="please_choose_a_group_for_the_sender">Please choose a group to add the sender in!</string>
+    <string name="done">Done</string>
+    <string name="are_you_sure_to_delete_contact">Remove %1$s?</string>
+    <string name="delete_contact_content">The conversation and locations with %1$s will be deleted permanently and can not be rolled back.</string>
+    <string name="guide_behaviour_input_message">Input your message here and send out</string>
+    <string name="view_profile">View Profile</string>
+    <string name="select_contacts">Select contacts</string>
+    <string name="network_is_not_available">Network is not available.</string>
+    <string name="setting_up_map_messenger_friends">Setting up Map Messenger friends!</string>
+    <string name="save_to_phone">Save to phone</string>
+    <string name="phone_saved_successfully">Photo has been saved successfully!</string>
+    <string name="phone_saved_unsuccessfully">Failed to save the photo!</string>
+
+    <!--Wheresk-->
+    <string name="distance_away">%1$s Away</string>
+    <string name="loading_processing">Loading, please wait......</string>
+    <string name="number_answers">%1$s Answers</string>
+    <string name="follow">Follow</string>
+    <string name="write_answer">Write Answer</string>
+    <string name="kilo">k</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="upvote">Upvote</string>
+    <string name="downvote">Downvote</string>
+    <string name="thanks">Already Thanked</string>
+    <string name="unthanks">Thanks</string>
+    <string name="comment">Comment</string>
+    <string name="comments">Comments (%1$s)</string>
+    <string name="please_input_comment_here">Input comment here</string>
+    <string name="please_input_comment">Please input comment!</string>
+    <string name="home">Home</string>
+    <string name="answer">Answer</string>
+    <string name="ask_question">Ask Question</string>
+    <string name="map">Map</string>
+    <string name="publish">Publish</string>
+    <string name="please_input_question">Please input question!</string>
+    <string name="specify_location_by_tapping_map">Please tap the map to specify the location to your question!</string>
+    <string name="publish_your_question">Publishing your question.</string>
+    <string name="publish_your_answer">Publishing your answer.</string>
+    <string name="gettting_your_location">Identifying your current area and loading map!</string>
+    <string name="answer_question">Answer Question</string>
+    <string name="input_question_here">Input quesiton here</string>
+    <string name="write_answer_here">Write answer here</string>
+    <string name="write_answer_desc_for_location">Write description here</string>
+    <string name="specify_location_for_answer">You could tap the map to specify the locations for your answer (Optional)!</string>
+    <string name="please_input_answer">Please input answer!</string>
+    <string name="no_description">No Description</string>
+    <string name="alert">Alert</string>
+    <string name="location_has_no_desc_alert">Some of the locations do not have description, do you want to publish anyway?</string>
+    <string name="question_location">Question Location</string>
+    <string name="or">Or</string>
+    <string name="modify_question">Modify Question</string>
+    <string name="modify_answer">Modify Answer</string>
+    <string name="followed_question">Followed Questions</string>
+    <string name="created_on">Created On %1$s</string>
+    <string name="last_updated_on">Last Updated On %1$s</string>
+    <string name="my_profile">My Profile</string>
+    <string name="your_questions">Your Questions</string>
+    <string name="your_answers">Your Answers</string>
+    <string name="new_answer_is_provided">New Answer Is Provided</string>
+    <string name="user_profile_title">%1$s\'s Profile</string>
+    <string name="thank_to_user">%1$s thanks to your answer</string>
+    <string name="list_of_thank_user">List Of Thank Users</string>
+    <string name="list_of_followers">List Of Followers</string>
+    <string name="list">List</string>
+    <string name="load_more">Load More</string>
+    <string name="questions">Questions</string>
+    <string name="answers">Answers</string>
+    <string name="max_marker_limit_reach">The max number of the markers displayed has been reached!</string>
+    <string name="delete_answer">Delete Answer</string>
+    <string name="are_your_sure_to_delete_answer">Are you sure to delete this answer?</string>
+    <string name="deleting_answer_in_progress">Deleting answer in progress...</string>
+    <string name="notification_setting">Receive Notification When</string>
+    <string name="notification_when_new_answer_provided">New answer arrives</string>
+    <string name="notification_when_receive_thank">Receive thanks</string>
+    <string name="notification_when_receive_comments">Receive comments</string>
+    <string name="comment_on_your_answer">%1$s comments</string>
+
 </resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:startColor="@color/light_holo_green_light"
+                      android:endColor="@color/light_holo_green_light"/>
+            <corners android:radius="3dp"/>
+            <stroke android:width="1px" android:color="@color/accent_25"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="@color/light_green_for_messaging"
+                      android:endColor="@color/light_green_for_messaging"/>
+            <corners android:radius="3dp"/>
+            <stroke android:width="1px" android:color="@color/accent_25"/>
+        </shape>
+    </item>
+</selector>
