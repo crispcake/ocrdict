@@ -187,7 +187,7 @@ public class OcrDictUtils {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
             return simpleDateFormat.format(date);
         } catch (Exception e) {
-            Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Error in class MapyouAndroidCommonUtils, method: getTimePrintable: ", e);
+            Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Error in class MapyouAndroidCommonUtils, method: getTimePrintable: ", e);
             return null;
         }
     }
@@ -332,7 +332,7 @@ public class OcrDictUtils {
             bos.close();
             return file;
         } catch (Exception e) {
-            Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Error occured in Class MapyouAndroidCommonUtils, method writeImageToFile: ", e);
+            Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Error occured in Class MapyouAndroidCommonUtils, method writeImageToFile: ", e);
             return null;
         }
     }
@@ -341,7 +341,7 @@ public class OcrDictUtils {
         File originalFile = new File(fileAbsolutePath);
         boolean succeed = originalFile.delete();
         if (!succeed) {
-            Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Can not delete file: " + fileAbsolutePath);
+            Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Can not delete file: " + fileAbsolutePath);
         }
     }
 
@@ -599,7 +599,7 @@ public class OcrDictUtils {
                                                                      try {
                                                                          callable.call();
                                                                      } catch (Exception e) {
-                                                                         Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Error occured in class MapyouAndroidCommonUtils, method setupOnGlobalLayoutListener: ", e);
+                                                                         Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Error occured in class MapyouAndroidCommonUtils, method setupOnGlobalLayoutListener: ", e);
                                                                      }
                                                                      int currentApiVersion = Build.VERSION.SDK_INT;
                                                                      if (currentApiVersion < Build.VERSION_CODES.JELLY_BEAN)
@@ -625,7 +625,7 @@ public class OcrDictUtils {
                     + OcrDictConstants.MOBILE_INFO_DELIMITER + Build.VERSION.RELEASE
                     + OcrDictConstants.MOBILE_INFO_DELIMITER + phoneScreenSize[0] + "x" + phoneScreenSize[1];
         } catch (Exception e) {
-            Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Error occured in Class MapyouAndroidCommonUtils, method getMobileInfo: ", e);
+            Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Error occured in Class MapyouAndroidCommonUtils, method getMobileInfo: ", e);
             return "";
         }
     }
@@ -658,7 +658,7 @@ public class OcrDictUtils {
                 return address.substring(0, address.length() - (countryOfAddress.length() + 1));
             }
         } catch (Exception e) {
-            Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "", e);
+            Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "", e);
         }
         return address;
     }
@@ -836,7 +836,7 @@ public class OcrDictUtils {
 
     public static void ReleaseWakeLock(Context context) {
         if (wl != null && wl.isHeld()) {
-            SharedPreferences sharedPref = context.getSharedPreferences(OcrDictConstants.WHERESK_SHARED_PREFERRENCES, Context.MODE_PRIVATE);
+            SharedPreferences sharedPref = context.getSharedPreferences(OcrDictConstants.OCRDICT_SHARED_PREFERRENCES, Context.MODE_PRIVATE);
             if (sharedPref.getBoolean(OcrDictConstants.SHARED_PREFERRENCE_DEBUG_ENABLED, OcrDictConstants.DEFAULT_DEBUG_ENABLED))
                 Toast.makeText(context, "Wake lock is released!", Toast.LENGTH_SHORT).show();
             wl.release();
@@ -850,7 +850,7 @@ public class OcrDictUtils {
             wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "MapyouWakeLock");
             wl.setReferenceCounted(false);
         }
-        SharedPreferences sharedPref = context.getSharedPreferences(OcrDictConstants.WHERESK_SHARED_PREFERRENCES, Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = context.getSharedPreferences(OcrDictConstants.OCRDICT_SHARED_PREFERRENCES, Context.MODE_PRIVATE);
         if (sharedPref.getBoolean(OcrDictConstants.SHARED_PREFERRENCE_DEBUG_ENABLED, OcrDictConstants.DEFAULT_DEBUG_ENABLED))
             Toast.makeText(context, "Wake lock is acquired!", Toast.LENGTH_SHORT).show();
         wl.acquire();
@@ -987,13 +987,13 @@ public class OcrDictUtils {
             Bitmap bitmap = BitmapFactory.decodeStream(is);
             return bitmap;
         } catch (FileNotFoundException e) {
-            Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Error in getBitmapByUri", e);
+            Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Error in getBitmapByUri", e);
             return null;
         } finally {
             try {
                 is.close();
             } catch (IOException e) {
-                Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Error in getBitmapByUri when run is.close()", e);
+                Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Error in getBitmapByUri when run is.close()", e);
             }
         }
     }
@@ -1061,9 +1061,9 @@ public class OcrDictUtils {
                 }
                 sb.replace(sb.length() - 2, sb.length(), "");
             }
-            Log.d(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Lat: " + lat + "; Lng: " + lng + " Address: " + sb.toString());
+            Log.d(OcrDictConstants.LOG_OCR_DICT_TAG, "Lat: " + lat + "; Lng: " + lng + " Address: " + sb.toString());
         } catch (IOException e) {
-            Log.e(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Error in Class MapService, method getAddressByLatLng: ", e);
+            Log.e(OcrDictConstants.LOG_OCR_DICT_TAG, "Error in Class MapService, method getAddressByLatLng: ", e);
             return GetAddressByGoogleMapAPI(lat, lng);
         }
         return sb.toString();
@@ -1079,7 +1079,7 @@ public class OcrDictUtils {
                 JSONObject result = results.getJSONObject(0);
                 if (result != null) {
                     String formattedAddress = result.getString("formatted_address");
-                    Log.d(OcrDictConstants.LOG_WHERESK_ANDROID_TAG, "Lat: " + lat + "; Lng: " + lng + " Address: " + formattedAddress);
+                    Log.d(OcrDictConstants.LOG_OCR_DICT_TAG, "Lat: " + lat + "; Lng: " + lng + " Address: " + formattedAddress);
                     return formattedAddress;
                 }
             }

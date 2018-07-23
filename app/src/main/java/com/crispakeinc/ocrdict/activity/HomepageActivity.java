@@ -19,7 +19,7 @@ import com.guna.ocrlibrary.OCRCapture;
 
 import static com.guna.ocrlibrary.OcrCaptureActivity.TextBlockObject;
 
-public class MainActivity extends AbstractBaseActivity {
+public class HomepageActivity extends AbstractNavigationDrawerActivity {
 
     private TextView textView;
     private final int CAMERA_SCAN_TEXT = 0;
@@ -28,6 +28,8 @@ public class MainActivity extends AbstractBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        actionBar.setTitle(getString(R.string.home));
+        actionBar.setCustomView(R.layout.simple_custom_menu_for_home);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.textView);
     }

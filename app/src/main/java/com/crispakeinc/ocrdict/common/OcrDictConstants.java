@@ -11,6 +11,12 @@ public class OcrDictConstants {
 
 
 
+    /*Log Related*/
+    public static final String LOGGED_IN_TOKEN = "LOGGED_IN_TOKEN";
+    public static final String LOG_OCR_DICT_TAG = "LOG_OCR_DICT_TAG";
+    public static final String SELF_PHONE_FILE_PATH = "SELF_PHONE_FILE_PATH";
+    public static final String SELF_DISPLAY_NAME = "SELF_DISPLAY_NAME";
+    public static final String SELF_EMAIL = "SELF_EMAIL";
 
     public static Class answerDetailWithLocationsActivity;
     public static Class askQuestionActivity;
@@ -22,7 +28,7 @@ public class OcrDictConstants {
     public static final String WHERESK_BROADCAST_RECEIVER_INTENT = "WHERESK_BROADCAST_RECEIVER_INTENT";
     public static final String KEY_TYPE_BROADCAST_RECEIVER = "KEY_TYPE_BROADCAST_RECEIVER";
     public static final String WHERESK_PACKAGE_NAME = "com.crispcake.wheresk.android";
-    public static final String WHERESK_SHARED_PREFERRENCES = "WHERESK_SHARED_PREFERRENCES";
+    public static final String OCRDICT_SHARED_PREFERRENCES = "OCRDICT_SHARED_PREFERRENCES";
     public static final String SHARED_PREFERRENCE_FIRST_LAUNCH_INDICATOR = "SHARED_PREFERRENCE_FIRST_LAUNCH_INDICATOR";
     public static final String MOBILE_INFO_DELIMITER = ",,,,,,.....";
     public static final int SMALL_SCREEN_WIDTH = 350;
@@ -44,8 +50,6 @@ public class OcrDictConstants {
     public static final double MIN_DIST_DIS_VALUE = 20;
     public static final int MIN_DIST_DISP_CONTACT_NAME = 50;
 
-    /*Log Related*/
-    public static final String LOG_WHERESK_ANDROID_TAG = "LOG_WHERESK_ANDROID_TAG";
 
     public static final String SERVER_WS_URL = "/webservice";
     public static final String GET_HOME_PAGE_LIST_RESPONSE_URL = SERVER_WS_URL + "/question/getQuestionsByLocation";
@@ -122,7 +126,6 @@ public class OcrDictConstants {
 
     public static final String KEY_INCLUDE_QUESTION_MARKER = "KEY_INCLUDE_QUESTION_MARKER";
     public static final int MY_LOCATION_CLUSTER_GROUP_ID = 100;
-    public static final String LOGGED_IN_TOKEN = "LOGGED_IN_TOKEN";
     public static final String LOGGED_IN_USER_ID_ON_SERVER = "LOGGED_IN_USER_ID_ON_SERVER";
 
     public static final int MAP_CAMERA_ZOOM_SPEED_MS = 700;

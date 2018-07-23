@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/list_of_answer_page_container"
+              xmlns:wheresk="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:orientation="vertical"
+              android:background="?activatableItemBackground"
+        >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center|center">
+
+        <LinearLayout android:id="@+id/list_of_answer_page_answer_container"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="left|center"
+                      android:orientation="horizontal"
+                >
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
+                        android:id="@+id/list_of_answer_user_icon"
+                        android:layout_width="@dimen/home_icon_size"
+                        android:layout_height="@dimen/home_icon_size"
+                        android:scaleType="centerCrop"
+                        wheresk:corner_radius="10dp"
+                        />
+                <LinearLayout android:id="@+id/list_of_answer_page_answer_rate_container"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:paddingLeft="5dp"
+                              android:paddingRight="5dp"
+                              android:layout_marginTop="5dp"
+                              android:background="@color/holo_blue_light"
+                        >
+                    <TextView android:id="@+id/list_of_answer_page_answer_rate_text"
+                              style="@style/answerRateTextStyle"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout android:id="@+id/list_of_answer_page_answer_summary_container"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginRight="10dp"
+                          android:baselineAligned="false"
+                    >
+                <TextView android:id="@+id/list_of_answer_page_answer_summary_text"
+                          style="@style/bestAnswerSummaryStyle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:maxLines="4"
+                          android:ellipsize="end"
+                        />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/list_of_answer_page_answer_location_container"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                    >
+                <ImageView
+                        android:layout_width="@dimen/location_icon_size"
+                        android:layout_height="@dimen/location_icon_size"
+                        android:src="@drawable/has_location"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/accent_28"
+            />
+</LinearLayout>
+

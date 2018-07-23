@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="10dp"
+              android:background="@color/accent_14"
+              android:orientation="vertical">
+    <TextView
+            style="@style/termsOfUseLableStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_of_use_title"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/holo_blue_light"
+            />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <TextView
+                android:id="@+id/user_terms_of_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/accent_13"
+                android:textSize="16sp"
+                android:paddingTop="10dp"/>
+    </ScrollView>
+    <Button
+            android:id="@+id/confirm_button_in_terms_of_use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_text"
+            style="@style/green_button"/>
+</LinearLayout>

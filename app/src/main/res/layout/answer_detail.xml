@@ -1,0 +1,364 @@
+<com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:wheresk="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/wheresk_swipe_refresh_layout"
+        android:background="@color/accent_14"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.crispcake.wheresk.lib.android.ui.customview.ObservableScrollView
+                android:id="@+id/answer_detail_whole_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:orientation="vertical"
+                        >
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp"
+                                android:gravity="center|center"
+                                android:baselineAligned="false">
+
+                            <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="2dp"
+                                    >
+                                <TextView android:id="@+id/answer_detail_question_created_date"
+                                          style="@style/createdDateStyle"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                        />
+                                <LinearLayout
+                                        android:id="@+id/distance_away_text_container"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="2dp"
+                                        android:paddingBottom="2dp"
+                                        android:paddingLeft="5dp"
+                                        android:paddingRight="5dp"
+                                        android:background="@drawable/square_with_round_corner_blue_button"
+                                        android:layout_alignParentRight="true"
+                                        >
+                                    <TextView
+                                            android:id="@+id/answer_detail_distance_away_text"
+                                            style="@style/textDistanceStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/distance_away"
+                                            />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                    android:id="@+id/answer_detail_question_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:baselineAligned="false"
+                                    >
+
+                                <TextView
+                                        android:id="@+id/answer_detail_question_text"
+                                        style="@style/questionTextStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/accent_28"
+                                />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp"
+                                android:gravity="left|center"
+                                android:baselineAligned="false">
+
+                            <LinearLayout
+                                    android:id="@+id/answer_detail_user_container"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="left|center"
+                                    android:background="?activatableItemBackground"
+                                    android:padding="5dp"
+                                    >
+                                <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
+                                        android:id="@+id/answer_detail_user_icon"
+                                        android:layout_width="@dimen/answer_detail_user_icon_size"
+                                        android:layout_height="@dimen/answer_detail_user_icon_size"
+                                        android:scaleType="centerCrop"
+                                        wheresk:corner_radius="15dp"/>
+
+                                <TextView
+                                        android:id="@+id/answer_detail_page_user_name"
+                                        style="@style/userNicknameTextStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        />
+                            </LinearLayout>
+                            <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:baselineAligned="false"
+                                    android:gravity="right|center">
+
+                                <LinearLayout
+                                        android:id="@+id/answer_detail_rate_container"
+                                        android:padding="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:background="?activatableItemBackground"
+                                        android:visibility="gone"
+                                        >
+
+                                    <ImageView
+                                            android:id="@+id/answer_detail_rate_image"
+                                            android:layout_width="@dimen/rate_icon_size"
+                                            android:layout_height="@dimen/rate_icon_size"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/thumbup"
+                                            />
+
+                                    <TextView
+                                            android:id="@+id/answer_detail_page_rate_text"
+                                            style="@style/followerNumberTextStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="0"
+                                            />
+                                </LinearLayout>
+                                <LinearLayout
+                                        android:id="@+id/answer_detail_my_own_answer_thanks_container"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:visibility="gone"
+                                        android:background="?activatableItemBackground"
+                                        >
+
+                                    <ImageView
+                                            android:id="@+id/answer_detail_my_own_answer_thank_image_view"
+                                            android:layout_width="@dimen/answer_detail_bottom_icon_size"
+                                            android:layout_height="@dimen/answer_detail_bottom_icon_size"
+                                            android:src="@drawable/heart_blue"
+                                            android:padding="2dp"
+                                            />
+
+                                    <TextView
+                                            android:id="@+id/answer_detail_my_own_answer_thank_text_view"
+                                            style="@style/answerDetailPageBottomOptionStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:text="@string/thanks"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/accent_28"
+                                />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:baselineAligned="false"
+                            android:scrollbars="vertical">
+
+                        <TextView
+                                android:id="@+id/answer_detail_page_answer_text"
+                                style="@style/answerDetailAnswerTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/answer_detail_last_update_date_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|top"
+                            >
+                        <TextView
+                                android:id="@+id/answer_detail_last_update_date_text_view"
+                                style="@style/answerDetailLastUpdateTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginBottom="60dp"
+                                android:layout_marginRight="10dp"
+                                />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </com.crispcake.wheresk.lib.android.ui.customview.ObservableScrollView>
+
+        <LinearLayout
+                android:id="@+id/answer_detail_additional_bottom_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/accent_14"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/accent_25"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                <LinearLayout
+                        android:id="@+id/answer_detail_thanks_container"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="?activatableItemBackground"
+                        >
+
+                    <ImageView
+                            android:id="@+id/answer_detail_thank_image_view"
+                            android:layout_width="@dimen/answer_detail_bottom_icon_size"
+                            android:layout_height="@dimen/answer_detail_bottom_icon_size"
+                            android:src="@drawable/heart_grey"
+                            android:padding="2dp"
+                            />
+
+                    <TextView
+                            android:id="@+id/answer_detail_thank_text_view"
+                            style="@style/answerDetailPageBottomOptionStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thanks"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/answer_detail_comments_container"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="?activatableItemBackground"
+                        >
+
+                    <ImageView
+                            android:layout_width="@dimen/answer_detail_bottom_icon_size"
+                            android:layout_height="@dimen/answer_detail_bottom_icon_size"
+                            android:src="@drawable/message_icon"
+                            android:padding="2dp"
+                            />
+
+                    <TextView
+                            android:id="@+id/answer_detail_num_of_comment_text_view"
+                            style="@style/answerDetailPageBottomOptionStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/answer_rate_option_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:gravity="center"
+                android:background="@color/accent_32"
+                android:orientation="horizontal"
+                >
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@color/white"
+                    >
+
+                <LinearLayout
+                        android:id="@+id/upvote_option_container"
+                        style="@style/answerRateOptionItemStyle"
+                        >
+
+                    <TextView
+                            style="@style/answerRateOptionStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/upvote"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/downvote_option_container"
+                        style="@style/answerRateOptionItemStyle"
+                        >
+
+                    <TextView
+                            style="@style/answerRateOptionStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/downvote"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout>

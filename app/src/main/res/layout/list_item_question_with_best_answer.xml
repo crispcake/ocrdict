@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wheresk="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+        >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:background="@drawable/square_with_round_corner_for_home_page"
+            android:gravity="center|center"
+            android:baselineAligned="false">
+
+        <RelativeLayout android:id="@+id/home_page_distance_away_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                >
+            <TextView android:id="@+id/home_page_question_created_date"
+                      style="@style/createdDateStyle"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                    />
+            <LinearLayout
+                    android:id="@+id/distance_away_text_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@drawable/square_with_round_corner_blue_button"
+                    android:layout_alignParentRight="true"
+                    >
+                <TextView android:id="@+id/home_page_distance_away_text"
+                          style="@style/textDistanceStyle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/distance_away"
+                        />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:id="@+id/home_page_question_container"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:baselineAligned="false"
+                      android:background="?activatableItemBackground"
+                      android:orientation="vertical"
+                >
+            <TextView android:id="@+id/home_page_question_text"
+                      style="@style/questionTextStyle"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                    />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/home_page_best_answer_container"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      android:gravity="left|center"
+                      android:baselineAligned="false"
+                      android:orientation="horizontal"
+                      android:background="?activatableItemBackground"
+                >
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
+                        android:id="@+id/home_user_icon"
+                        android:layout_width="@dimen/home_icon_size"
+                        android:layout_height="@dimen/home_icon_size"
+                        android:scaleType="centerCrop"
+                        wheresk:corner_radius="10dp"
+                        />
+                <LinearLayout android:id="@+id/home_page_best_answer_rate_container"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:paddingLeft="5dp"
+                              android:paddingRight="5dp"
+                              android:layout_marginTop="5dp"
+                              android:background="@color/holo_blue_light"
+                        >
+                    <TextView android:id="@+id/home_page_best_answer_rate_text"
+                              style="@style/answerRateTextStyle"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout android:id="@+id/home_page_best_answer_summary_container"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="10dp"
+                          android:layout_marginRight="10dp"
+                          android:baselineAligned="false"
+                    >
+                <TextView android:id="@+id/home_page_best_answer_summary_text"
+                          style="@style/bestAnswerSummaryStyle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                        />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/home_page_best_answer_location_container"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                    >
+                <ImageView
+                        android:layout_width="@dimen/location_icon_size"
+                        android:layout_height="@dimen/location_icon_size"
+                        android:src="@drawable/has_location"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

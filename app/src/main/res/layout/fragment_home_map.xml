@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <FrameLayout
+            android:id="@+id/fragment_home_map_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <com.crispcake.wheresk.android.ui.customview.MapWrapperLayout android:id="@+id/map_relative_layout"
+                                                                      android:layout_width="match_parent"
+                                                                      android:layout_height="match_parent">
+            <FrameLayout
+                    android:id="@+id/map_for_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </com.crispcake.wheresk.android.ui.customview.MapWrapperLayout>
+
+        <FrameLayout
+                android:id="@+id/load_more_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:background="@drawable/square_with_round_corner_for_load_more"
+                android:baselineAligned="false"
+                >
+            <TextView
+                    style="@style/loadMoreTextStyleInMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/load_more"
+                    />
+        </FrameLayout>
+
+        <FrameLayout
+                android:id="@+id/enlarge_to_full_screen_container"
+                android:layout_width="@dimen/icon_size_in_map"
+                android:layout_height="@dimen/icon_size_in_map"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:background="@drawable/square_with_round_corner_light_background">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/enlarge_to_full_screen"/>
+        </FrameLayout>
+
+        <FrameLayout
+                android:id="@+id/reduce_to_window_screen_container"
+                android:layout_width="@dimen/icon_size_in_map"
+                android:layout_height="@dimen/icon_size_in_map"
+                android:layout_gravity="top|right"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:background="@drawable/square_with_round_corner_light_background"
+                android:baselineAligned="false"
+                android:visibility="gone"
+                >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/return_from_full_screen"/>
+        </FrameLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:gravity="center|center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+            <LinearLayout
+                    android:id="@+id/my_location_button_container"
+                    android:layout_width="@dimen/icon_size_in_map"
+                    android:layout_height="@dimen/icon_size_in_map"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/square_with_round_corner_light_background"
+                    >
+
+                <ImageView
+                        android:id="@+id/my_location_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_location_disabled"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:gravity="center|center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/two_layer_markers_icon_container"
+                    android:layout_width="@dimen/icon_size_in_map"
+                    android:layout_height="@dimen/icon_size_in_map"
+                    android:layout_marginBottom="5dp"
+                    android:padding="6dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/square_with_round_corner_light_background">
+
+                <ImageView
+                        android:id="@+id/two_layer_markers_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/two_marker_with_circle"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

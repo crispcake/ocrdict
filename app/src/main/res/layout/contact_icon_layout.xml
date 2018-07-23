@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:mapyou="http://schemas.android.com/apk/res-auto"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:duplicateParentState="true">
+    <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
+            android:id="@+id/contact_photo"
+            android:layout_width="@dimen/profile_contact_icon_size"
+            android:layout_height="@dimen/profile_contact_icon_size"
+            android:src="@drawable/person_image_empty"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            mapyou:corner_radius="@dimen/profile_contact_radius"/>
+    <LinearLayout android:id="@+id/character_view_container"
+                  android:layout_width="@dimen/profile_contact_icon_size"
+                  android:layout_height="@dimen/profile_contact_icon_size"
+                  android:gravity="center"
+                  android:visibility="gone"
+                  android:baselineAligned="false">
+        <TextView android:id="@+id/character_view_text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  style="@style/firstCharacterStyleLarge"
+                />
+    </LinearLayout>
+</FrameLayout>

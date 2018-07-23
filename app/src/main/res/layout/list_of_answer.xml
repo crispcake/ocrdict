@@ -1,0 +1,185 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/accent_14"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center|center"
+            android:baselineAligned="false">
+
+        <RelativeLayout
+                android:id="@+id/list_of_answer_distance_away_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginBottom="2dp"
+                android:baselineAligned="false"
+                >
+            <TextView android:id="@+id/list_of_answer_question_created_date"
+                      style="@style/createdDateStyle"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                    />
+            <LinearLayout
+                    android:id="@+id/distance_away_text_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@drawable/square_with_round_corner_blue_button"
+                    android:layout_alignParentRight="true"
+                    >
+                <TextView
+                        android:id="@+id/list_of_answer_distance_away_text"
+                        style="@style/textDistanceStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distance_away"
+                        />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/list_of_answer_question_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:background="?activatableItemBackground"
+                >
+            <TextView
+                    android:id="@+id/list_of_answer_question_text"
+                    style="@style/questionTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:maxLines="5"
+                    android:ellipsize="end"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/accent_28"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="left|center"
+            android:baselineAligned="false">
+        <LinearLayout
+                android:id="@+id/list_of_answer_follower_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="?activatableItemBackground"
+                >
+            <ImageView
+                    android:layout_width="@dimen/follower_icon_size"
+                    android:layout_height="@dimen/follower_icon_size"
+                    android:src="@drawable/focus_grey"
+                    />
+
+            <TextView
+                    android:id="@+id/list_of_answer_page_question_follower_text"
+                    style="@style/followerNumberTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:gravity="right">
+
+            <Button
+                    android:id="@+id/list_of_answer_page_follow_button"
+                    style="@style/smallBlueButtonWithRoundCorner"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:text="@string/follow"
+                    />
+
+            <Button
+                    android:id="@+id/list_of_answer_page_unfollow_button"
+                    style="@style/smallGreyButtonWithRoundCorner"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:text="@string/unfollow"
+                    android:visibility="gone"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/follow_loading_gif_container"
+                    style="@style/smallBlueButtonWithRoundCorner"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/square_with_round_corner_for_follow_blue"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    >
+
+                <com.crispcake.wheresk.lib.android.ui.customview.LoadingGifView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        />
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/list_of_answer_page_write_answer_button"
+                    style="@style/smallBlueButtonWithRoundCorner"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/write_answer"
+                    android:visibility="gone"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/accent_28"
+            />
+
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+        <com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/wheresk_swipe_refresh_layout"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+            <fragment
+                    android:id="@+id/listOfAnswerListFragment"
+                    android:name="com.crispcake.wheresk.lib.android.ui.ListOfAnswerListFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+        </com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout>
+    </FrameLayout>
+</LinearLayout>
+

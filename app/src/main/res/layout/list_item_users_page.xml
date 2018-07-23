@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wheresk="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/answer_user_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="left|center"
+        android:background="?activatableItemBackground"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left|center"
+            android:layout_marginRight="10dp">
+
+            <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
+                android:id="@+id/answer_user_icon"
+                android:layout_width="@dimen/answer_thank_user_icon_size"
+                android:layout_height="@dimen/answer_thank_user_icon_size"
+                android:scaleType="centerCrop"
+                wheresk:corner_radius="20dp"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="left|center">
+
+            <TextView
+                android:id="@+id/answer_user_name"
+                style="@style/answerThankUserNameStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:id="@+id/answer_created_date"
+                style="@style/answerThankUserDateStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+
+            <LinearLayout
+                android:id="@+id/user_page_thanks_container"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/user_page_thanks_image"
+                    android:layout_width="@dimen/rate_icon_size"
+                    android:layout_height="@dimen/rate_icon_size"
+                    android:src="@drawable/heart_grey"
+                    />
+
+                <TextView
+                    android:id="@+id/user_page_num_thanks_text"
+                    style="@style/followerNumberTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/accent_28"
+        />
+</LinearLayout>
+

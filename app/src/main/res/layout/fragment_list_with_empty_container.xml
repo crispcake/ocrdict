@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/accent_14"
+              android:orientation="vertical"
+              android:baselineAligned="false"
+              style="@style/ListItemContainerBase">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+            >
+        <FrameLayout
+                android:id="@android:id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center"
+                android:visibility="gone"/>
+        <ListView android:id="@android:id/list"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:scrollingCache="false"
+                  android:background="@color/accent_14"
+                  android:divider="@drawable/list_divider"
+                  android:drawSelectorOnTop="false"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wheresk_swipe_refresh_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/accent_14"
+        android:orientation="vertical">
+        >
+        <fragment
+            android:id="@+id/listOfQuestionFollowersFragment"
+            android:name="com.crispcake.wheresk.lib.android.ui.ListOfQuestionFollowersFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+</com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout>

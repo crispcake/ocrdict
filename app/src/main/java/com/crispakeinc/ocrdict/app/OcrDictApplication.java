@@ -4,6 +4,8 @@ import android.app.Application;
 import android.os.StrictMode;
 
 import com.crispakeinc.ocrdict.common.OcrDictUtils;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 
 public class OcrDictApplication extends Application {
     private static boolean activityVisible = false;
@@ -13,6 +15,8 @@ public class OcrDictApplication extends Application {
     public void onCreate() {
         super.onCreate();
 //        ActiveAndroid.initialize(this);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         setupStrictMode();
     }
 

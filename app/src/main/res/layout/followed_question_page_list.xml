@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/wheresk_swipe_refresh_layout"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/accent_14"
+                    android:orientation="vertical">
+                <FrameLayout
+                        android:id="@+id/homePageListFragmentFrameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                    <fragment
+                            android:id="@+id/followedQuestionPageListFragment"
+                            android:name="com.crispcake.wheresk.lib.android.ui.FollowedQuestionPageListFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout>
+    <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:choiceMode="singleChoice"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:background="@color/grey_dark_mini_transparent"/>
+</android.support.v4.widget.DrawerLayout>

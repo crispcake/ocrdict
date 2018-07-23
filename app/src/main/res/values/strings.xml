@@ -345,4 +345,19 @@
     <string name="notification_when_receive_comments">Receive comments</string>
     <string name="comment_on_your_answer">%1$s comments</string>
 
+
+
+    <string name="facebook_app_id">890051254444997</string>
+    <string name="fb_login_protocol_scheme">fb890051254444997</string>
+    <string name="auth_google_in_progress">Authentication is in progress</string>
+    <string name="google_authentication_fail">Google authentication failed. Please input the correct username and password!</string>
+    <string name="login_with_google">Log in with Google</string>
+    <string name="com_facebook_loginview_log_in_button_long">Log in with Facebook</string>
+    <string name="com_facebook_loginview_log_out_button">Log in with Facebook</string>
+    <string name="com_facebook_loginview_log_in_button">Log in with Facebook</string>
+    <string name="wheresk_desc1">Ask questions and find answers</string>
+    <string name="wheresk_desc2">Around you</string>
+    <string name="wheresk_terms_of_use1">By continuing you indicate that you have read and agree</string>
+    <string name="wheresk_terms_of_use2">to the <u>Terms of Use</u></string>
+
 </resources>

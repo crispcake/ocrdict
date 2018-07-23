@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_gravity="right|center"
+    >
+    <LinearLayout android:id="@+id/publishButtonContainer"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/menu_container_padding"
+                  android:background="@drawable/simple_menu_item_background"
+        >
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/social_send_now_white"
+            />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/removeMarkerContainer"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/menu_container_padding"
+                  android:background="@drawable/simple_menu_item_background"
+                  android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_action_delete"
+            />
+    </LinearLayout>
+</LinearLayout>

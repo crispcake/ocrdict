@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapFrameLayout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <fragment android:id="@+id/map"
+              android:name="com.androidmapsextensions.SupportMapFragment"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"/>
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:gravity="center|center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+        <LinearLayout
+                android:id="@+id/my_location_button_container"
+                android:layout_width="@dimen/icon_size_in_map"
+                android:layout_height="@dimen/icon_size_in_map"
+                android:gravity="center"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/square_with_round_corner_light_background"
+                >
+
+            <ImageView
+                    android:id="@+id/my_location_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_location_disabled"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

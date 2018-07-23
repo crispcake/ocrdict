@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wheresk="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="10dp"
+              android:background="@color/accent_14"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:baselineAligned="false"
+            android:gravity="left|center"
+            >
+        <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
+                android:id="@+id/user_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                wheresk:corner_radius="20dp"/>
+
+        <TextView
+                android:id="@+id/user_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                />
+
+        <LinearLayout
+                android:id="@+id/user_profile_rate_container"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="?activatableItemBackground"
+                >
+
+            <ImageView
+                    android:id="@+id/user_profile_rate_image"
+                    android:layout_width="@dimen/rate_icon_size"
+                    android:layout_height="@dimen/rate_icon_size"
+                    android:layout_gravity="center"
+                    android:src="@drawable/thumbup"
+                    />
+
+            <TextView
+                    android:id="@+id/user_profile_num_rate_text"
+                    style="@style/followerNumberTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/user_profile_thanks_container"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="?activatableItemBackground"
+                >
+
+            <ImageView
+                    android:id="@+id/user_profile_thanks_image"
+                    android:layout_width="@dimen/rate_icon_size"
+                    android:layout_height="@dimen/rate_icon_size"
+                    android:layout_gravity="center"
+                    android:src="@drawable/heart_blue"
+                    />
+
+            <TextView
+                    android:id="@+id/user_profile_num_thanks_text"
+                    style="@style/followerNumberTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/user_question_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/myProfileBigButtonTextSize"
+                android:text="@string/questions"
+                android:background="@color/light_blue_for_messaging"
+                android:textAllCaps="false"
+            />
+
+        <Button
+                android:id="@+id/user_answered_question_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/myProfileBigButtonTextSize"
+                android:text="@string/answers"
+                android:background="@drawable/activatable_light_background"
+                android:textAllCaps="false"
+            />
+    </LinearLayout>
+
+    <com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout
+            android:id="@+id/wheresk_swipe_refresh_layout"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+            <LinearLayout
+                    android:id="@+id/user_profile_user_question_list_fragment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                <fragment
+                        android:id="@+id/myProfileMyQuestionsListFragment"
+                        android:name="com.crispcake.wheresk.lib.android.ui.UserProfileMyQuestionsListFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/user_profile_answered_questions_list_fragment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                <fragment
+                        android:id="@+id/myProfileAnsweredQuestionsListFragment"
+                        android:name="com.crispcake.wheresk.lib.android.ui.UserProfileAnsweredQuestionsListFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+    </com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout>
+
+</LinearLayout>
+

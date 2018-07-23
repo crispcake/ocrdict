@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wheresk="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:baselineAligned="false"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:baselineAligned="false"
+            >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="left|center"
+                android:layout_marginRight="10dp"
+                android:baselineAligned="false">
+
+            <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
+                    android:id="@+id/answer_comment_user_icon"
+                    android:layout_width="@dimen/answer_comment_user_icon_size"
+                    android:layout_height="@dimen/answer_comment_user_icon_size"
+                    android:scaleType="centerCrop"
+                    wheresk:corner_radius="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:baselineAligned="false">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                <TextView
+                        android:id="@+id/answer_comment_user_name"
+                        style="@style/answerCommentUserNameStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                <TextView
+                        android:id="@+id/answer_comment_created_date"
+                        style="@style/answerCommentComentDateStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        />
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/answer_comment_comment"
+                    style="@style/answerCommentComentStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|top"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/accent_28"
+            />
+</LinearLayout>
+

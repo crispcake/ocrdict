@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+        >
+    <!-- Hidden layout which will be focused when the page is loaded -->
+    <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+    <EditText
+            android:id="@+id/answer_question_answer_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:scrollbars="vertical"
+            android:textColor="@color/accent_11"
+            android:text="@string/write_answer_here"
+            android:gravity="left|top"
+            />
+</FrameLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wheresk_swipe_refresh_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/accent_14"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/answerCommentPageListFragmentFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <fragment
+                    android:id="@+id/answerCommentPageListFragment"
+                    android:name="com.crispcake.wheresk.lib.android.ui.AnswerCommentListFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </FrameLayout>
+            <!-- Hidden layout which will be focused when the page is loaded -->
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="0px"
+                android:layout_height="0px"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/answer_comment_message_to_be_sent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:windowSoftInputMode="stateAlwaysHidden"
+                    android:scrollbars="vertical"
+                    android:maxLines="6"
+                    android:textColor="@color/accent_16"
+                    android:text="@string/please_input_comment_here"
+                    />
+
+                <Button
+                    android:id="@+id/answer_comment_send_message_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/send"
+                    android:textColor="@color/white"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:textSize="13sp"
+                    android:background="@drawable/square_with_round_corner_grey_button"
+                    />
+
+                <com.crispcake.wheresk.lib.android.ui.customview.LoadingGifView
+                    android:id="@+id/loading_gif_for_sending_comment"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right|center"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.crispcake.wheresk.lib.android.ui.customview.MultiSwipeRefreshLayout>
