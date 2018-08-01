@@ -113,7 +113,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal"
                                     android:gravity="left|center"
-                                    android:background="?activatableItemBackground"
+                                    android:background="@drawable/activatable_item_background"
                                     android:padding="5dp"
                                     >
                                 <com.crispcake.wheresk.lib.android.ui.roundimage.RoundedImageView
@@ -145,7 +145,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:orientation="horizontal"
-                                        android:background="?activatableItemBackground"
+                                        android:background="@drawable/activatable_item_background"
                                         android:visibility="gone"
                                         >
 
@@ -175,7 +175,7 @@
                                         android:gravity="center"
                                         android:orientation="horizontal"
                                         android:visibility="gone"
-                                        android:background="?activatableItemBackground"
+                                        android:background="@drawable/activatable_item_background"
                                         >
 
                                     <ImageView
@@ -388,7 +388,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:background="?activatableItemBackground"
+                        android:background="@drawable/activatable_item_background"
                         >
 
                     <ImageView
@@ -415,7 +415,7 @@
                         android:padding="5dp"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:background="?activatableItemBackground"
+                        android:background="@drawable/activatable_item_background"
                         >
 
                     <ImageView

@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:padding="10dp"
         android:gravity="left|center"
-        android:background="?activatableItemBackground"
+        android:background="@drawable/activatable_item_background"
         >
 
         <LinearLayout

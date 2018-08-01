@@ -69,7 +69,7 @@ public abstract class AbstractNavigationDrawerActivity extends AbstractBaseActiv
 
         specifyItemSelected();
 
-        drawerLayout.setDrawerListener(drawerToggle);
+        drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
 
         displayNavigationDrawerOnFirstLaunch();
@@ -77,7 +77,7 @@ public abstract class AbstractNavigationDrawerActivity extends AbstractBaseActiv
 
     protected void initializeDrawerItemList() {
         drawerItemList = new ArrayList<DrawerItem>();
-//        drawerItemList.add(new DrawerItem(true, null, null, null));
+        drawerItemList.add(new DrawerItem(true, null, null, null));
         drawerItemList.add(new DrawerItem(false, HomepageActivity.class, getString(R.string.home), R.drawable.home_white));
 //        drawerItemList.add(new DrawerItem(false, FollowedQuestionPageActivity.class, getString(R.string.follow), R.drawable.focus_white));
 //        drawerItemList.add(new DrawerItem(false, SystemConfigurationActivity.class, getString(R.string.setting), R.drawable.action_bar_settings_white));

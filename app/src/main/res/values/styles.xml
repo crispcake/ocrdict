@@ -96,7 +96,7 @@
 
     <!-- List views and list mapyouCallLogList -->
     <style name="ListItemContainerBase">
-        <item name="android:background">?activatableItemBackground</item>
+        <item name="android:background">@drawable/activatable_item_background</item>
         <item name="android:minHeight">80dp</item>
     </style>
 
@@ -224,14 +224,14 @@
 
     <style name="systemConfigTextEditStyle">
         <item name="android:padding">10dp</item>
-        <item name="android:background">?activatableItemBackground</item>
+        <item name="android:background">@drawable/activatable_item_background</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/holo_blue_light</item>
     </style>
 
     <style name="systemConfigTextEditStyleSelection">
         <item name="android:padding">10dp</item>
-        <item name="android:background">?activatableItemBackground</item>
+        <item name="android:background">@drawable/activatable_item_background</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/mapyou_grey_body_text_1</item>
     </style>

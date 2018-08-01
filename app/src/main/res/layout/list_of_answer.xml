@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:baselineAligned="false"
-                android:background="?activatableItemBackground"
+                android:background="@drawable/activatable_item_background"
                 >
             <TextView
                     android:id="@+id/list_of_answer_question_text"
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:background="?activatableItemBackground"
+                android:background="@drawable/activatable_item_background"
                 >
             <ImageView
                     android:layout_width="@dimen/follower_icon_size"

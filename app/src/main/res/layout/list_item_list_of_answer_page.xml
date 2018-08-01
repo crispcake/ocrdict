@@ -6,7 +6,7 @@
               android:paddingLeft="10dp"
               android:paddingRight="10dp"
               android:orientation="vertical"
-              android:background="?activatableItemBackground"
+              android:background="@drawable/activatable_item_background"
         >
     <LinearLayout
             android:layout_width="match_parent"

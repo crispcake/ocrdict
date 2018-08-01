@@ -1,7 +1,6 @@
 package com.crispakeinc.ocrdict.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -41,24 +40,24 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
 
 	@Override
 	public View getView(int position, View view, ViewGroup parent) {
-		final DrawerItemHolder drawerHolder;
+		final DrawerItemHolder drawerItemHolder;
 
 		if (view == null) {
 			LayoutInflater inflater = activity.getLayoutInflater();
 //            LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			view = inflater.inflate(layoutResID, parent, false);
-            drawerHolder = initDrawerHolder(view);
-			view.setTag(drawerHolder);
+            drawerItemHolder = initDrawerItemHolder(view);
+			view.setTag(drawerItemHolder);
 		} else {
-			drawerHolder = (DrawerItemHolder) view.getTag();
+			drawerItemHolder = (DrawerItemHolder) view.getTag();
 		}
 
 		DrawerItem dItem = this.drawerItemList.get(position);
 
 		if (dItem.getIsHeader()) {
             view.setClickable(false);
-			drawerHolder.headerLayout.setVisibility(LinearLayout.VISIBLE);
-            drawerHolder.headerLayout.setOnClickListener(new View.OnClickListener() {
+			drawerItemHolder.headerLayout.setVisibility(LinearLayout.VISIBLE);
+            drawerItemHolder.headerLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     activity.getDrawerLayout().closeDrawers();
@@ -68,7 +67,7 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
 //                    activity.startActivity(intent);
                 }
             });
-            drawerHolder.itemLayout.setVisibility(LinearLayout.GONE);
+            drawerItemHolder.itemLayout.setVisibility(LinearLayout.GONE);
 
             if(displayName == null) {
                 new AsyncTask<Void, Void, Void>() {
@@ -87,39 +86,39 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
 
                     @Override
                     protected void onPostExecute(Void aVoid) {
-                        drawerHolder.userNameTextView.setText(displayName);
-                        //drawerHolder.selfDescriptionTextView.setText("Integration Engineer");
-                        drawerHolder.userIcon.setImageBitmap(userProfileImageBitmap);
+                        drawerItemHolder.userNameTextView.setText(displayName);
+                        //drawerItemHolder.selfDescriptionTextView.setText("Integration Engineer");
+                        drawerItemHolder.userIcon.setImageBitmap(userProfileImageBitmap);
                     }
                 }.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);
             } else {
-                drawerHolder.userNameTextView.setText(displayName);
-                //drawerHolder.selfDescriptionTextView.setText("Integration Engineer");
-                drawerHolder.userIcon.setImageBitmap(userProfileImageBitmap);
+                drawerItemHolder.userNameTextView.setText(displayName);
+                //drawerItemHolder.selfDescriptionTextView.setText("Integration Engineer");
+                drawerItemHolder.userIcon.setImageBitmap(userProfileImageBitmap);
             }
 		} else {
             view.setClickable(false);
-			drawerHolder.headerLayout.setVisibility(LinearLayout.GONE);
-			drawerHolder.itemLayout.setVisibility(LinearLayout.VISIBLE);
-			drawerHolder.icon.setImageDrawable(view.getResources().getDrawable(dItem.getImgResID()));
-			drawerHolder.ItemNameTextView.setText(dItem.getItemName());
+			drawerItemHolder.headerLayout.setVisibility(LinearLayout.GONE);
+			drawerItemHolder.itemLayout.setVisibility(LinearLayout.VISIBLE);
+			drawerItemHolder.icon.setImageDrawable(view.getResources().getDrawable(dItem.getImgResID()));
+			drawerItemHolder.ItemNameTextView.setText(dItem.getItemName());
         }
 		return view;
 	}
 
-    protected DrawerItemHolder initDrawerHolder(View view) {
-        DrawerItemHolder drawerHolder = new DrawerItemHolder();
-        drawerHolder.headerLayout = view.findViewById(R.id.headerLayout);
-        drawerHolder.userNameTextView = (TextView) view.findViewById(R.id.user_name_text_view);
-        drawerHolder.selfDescriptionTextView = (TextView) view.findViewById(R.id.self_description_text_view);
-        drawerHolder.selfDescriptionContainer = view.findViewById(R.id.self_description_container);
-        drawerHolder.userIcon = (ImageView) view.findViewById(R.id.user_icon);
+    protected DrawerItemHolder initDrawerItemHolder(View view) {
+        DrawerItemHolder drawerItemHolder = new DrawerItemHolder();
+        drawerItemHolder.headerLayout = view.findViewById(R.id.headerLayout);
+        drawerItemHolder.userNameTextView = (TextView) view.findViewById(R.id.user_name_text_view);
+        drawerItemHolder.selfDescriptionTextView = (TextView) view.findViewById(R.id.self_description_text_view);
+        drawerItemHolder.selfDescriptionContainer = view.findViewById(R.id.self_description_container);
+        drawerItemHolder.userIcon = (ImageView) view.findViewById(R.id.user_icon);
 
-        drawerHolder.itemLayout = view.findViewById(R.id.itemLayout);
-        drawerHolder.ItemNameTextView = (TextView) view.findViewById(R.id.drawer_itemName);
-        drawerHolder.icon = (ImageView) view.findViewById(R.id.drawer_icon);
+        drawerItemHolder.itemLayout = view.findViewById(R.id.itemLayout);
+        drawerItemHolder.ItemNameTextView = (TextView) view.findViewById(R.id.drawer_itemName);
+        drawerItemHolder.icon = (ImageView) view.findViewById(R.id.drawer_icon);
 
-        return drawerHolder;
+        return drawerItemHolder;
     }
 
     public static class DrawerItemHolder {
